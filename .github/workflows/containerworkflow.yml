@@ -29,6 +29,7 @@ jobs:
      runs-on: ubuntu-latest
      if: github.ref == 'refs/heads/master'
      needs: build-deploy-image
+     environment: PROD
 
      steps:
        - name: checkout to get manifest file
