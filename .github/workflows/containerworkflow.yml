@@ -23,3 +23,44 @@ jobs:
       
       - run: docker build -t ${{ env.IMAGE_NAME }} .
       - run: docker push ${{ env.IMAGE_NAME }}
+
+
+  deploy-to-aks:
+     runs-on: ubuntu-latest
+     if: github.ref == 'refs/heads/master'
+     needs: build-deploy-image
+
+     steps:
+       - name: checkout to get manifest file
+         uses: actions/checkout@v4.1.0
+
+       - name: Azure set Context
+         uses: azure/login@v1
+         with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+       - uses: azure/aks-set-context@v3
+         with:
+           resource-group: ${{ secrets.AKS_RESOURCE_GROUP }}
+           cluster-name: ${{ secrets.AKS_NAME }}
+       
+       - name: Create secret in Kubernetes cluster
+         uses: Azure/k8s-create-secret@v4.0
+         with:
+           secret-name: ${{ secrets.AKS_SECRET }}
+           container-registry-url: ${{ env.ACR_LOGON_SERVER }}
+           container-registry-username: ${{ secrets.SERVICE_PRINCIPAL_ID }}
+           container-registry-password: ${{ secrets.SERVICE_PRINCIPAL_PASSWORD }}
+
+       - name: Deploy to Kubernetes cluster
+         uses: Azure/k8s-deploy@v4.9
+         with:
+           manifests: |
+               manifests/deployment.yml
+               manifests/service.yml
+           images:  |
+                ${{env.IMAGE_NAME}}
+           imagepullsecrets:  |
+               ${{secrets.AKS_SECRET}}
+             
+    
