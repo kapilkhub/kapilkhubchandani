@@ -1,1 +1,15 @@
+name: Container Workflow
+on: 
+  workflow_dispatch:
+  
+env:
+  ACR_LOGON_SERVER: ${{ secrets.ACR_NAME }}.azurecr.io
+  IMAGE_NAME: ${{ secrets.ACR_NAME }}.azurecr.io/kapilkhubchandani:${{ github.sha }}
 
+jobs:
+  build-deploy-image:
+    runs-on: ubuntu-latest
+    steps:
+      #checkout the repo
+      - name: Checkout Github Action
+        run: $echo "checkout master"
