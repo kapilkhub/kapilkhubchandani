@@ -59,6 +59,7 @@ jobs:
            manifests: |
                manifests/deployment.yml
                manifests/service.yml
+               manifests/ingress.yaml
            images:  |
                 ${{env.IMAGE_NAME}}
            imagepullsecrets:  |
