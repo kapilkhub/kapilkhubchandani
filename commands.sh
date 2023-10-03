@@ -22,3 +22,6 @@ az ad sp create-for-rbac --name $SP_NAME --scopes $RG_ID --role Contributor --sd
 
  #create azure kuberenets service
  az aks create --resource-group $RG_NAME --name $AKS_NAME --node-count 1 --generate-ssh-keys --attach-acr $ACR_NAME --service-principal $SP_ID --client-secret $SP_PASSWORD
+
+
+ az aks update --resource-group $RG_NAME --name $AKS_NAME --attach-acr $ACR_NAME --service-principal $SP_ID --client-secret $SP_PASSWORD

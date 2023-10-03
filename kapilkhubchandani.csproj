@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include=".github\workflows\buildworkflow.yml" />
     <None Include=".github\workflows\containerworkflow.yml" />
   </ItemGroup>
 
