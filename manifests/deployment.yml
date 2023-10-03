@@ -17,7 +17,7 @@ spec:
         app: kapilkhubchandani
     spec:
       containers:
-      - image: acrkhubchandani.azurecr.io/kapilkhubchandani:v1
+      - image: acrkhubchandani.azurecr.io/kapilkhubchandani:51d8d951f979731152119634e45d4d28d7a5161c
         name: kapilkhubchandani
         imagePullPolicy: IfNotPresent
         ports:
@@ -26,8 +26,6 @@ spec:
            name: http
         env:
          - name: ASPNETCORE_URLS
-           value: http://+:80
-         - name: WebApiBaseAddress
-           value: http://webapi
+           value: http://+:80         
         resources: {}
 status: {}
