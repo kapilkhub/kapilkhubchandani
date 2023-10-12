@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: kapilkhubchandani
+  name: kapilkhubchandani
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kapilkhubchandani
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kapilkhubchandani
+    spec:
+      containers:
+      - image: kapil:v1
+        name: kapilkhubchandani
+        imagePullPolicy: IfNotPresent
+        ports:
+         - containerPort: 80
+           protocol: TCP
+           name: http
+        env:
+         - name: ASPNETCORE_URLS
+           value: http://+:80         
+        resources: {}
+status: {}

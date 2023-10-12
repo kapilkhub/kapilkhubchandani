@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{.Release.Name}}
+  annotations:
+     kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+    - host: khubchandani.local
+      http:
+        paths:
+          - backend:
+              service:
+                 name: kapilkhubchandani
+                 port:
+                   name: http
+            path: /
+            pathType: Prefix
