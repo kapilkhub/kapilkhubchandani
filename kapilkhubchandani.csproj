@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="aks-networking\" />
     <Folder Include="helm\khubchandani\charts\" />
+    <Folder Include="ingress-sample\" />
   </ItemGroup>
 
 </Project>

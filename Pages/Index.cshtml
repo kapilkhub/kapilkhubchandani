@@ -5,6 +5,56 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To Kubernetes Deployment with Github Actions</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="row">
+    <div class="col-12">
+       <p>Hello, Welcome to my website. This website is in work in progress. Hopefully, when you visit next time you will have a better experience. </p>
+      
+    </div>
+
+   
+</div>
+<br />
+
+<div class="row">
+    <div class="col-12">
+       
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+       <img src="img/kapil.jpg" alt="My photo" height="400" width="100%" />
+    </div>
+    <div class="col-8">
+        <fieldset>
+            <legend> About Me.</legend>
+            My name is Kapil Khubchandani and I am a .net developer with 10 years of experience.
+            Being a .net enthusiast, who has seen .net world grow very closely since 2008. I am a passionate tech explorer, I enjoy applying the ideas to design, develop and improve business solutions.
+        </fieldset>
+
+        <br />
+        <fieldset>
+            <legend>How this website is developed?</legend>
+            <p>
+             This website is developed using simple MVC razor pages. 
+             However, this website is powered by <b>Github Actions</b> and <b>Azure Kubernetes Service (AKS). </b> 
+             </p>
+             <p> Behind the scenes AKS is connected with <b>Azure Container Registry </b> in which image is pushed by Github actions </p>
+             <p>AKS is deployed on a cluster which has two node pools i.e <b>System Pool and User Pool </b>. To keep the cost low each pool has only one node. </p>
+            <p>
+                The authorization between AKS and ACR is handled
+                by service principal. But it can also be handled by Azure managed Identies.
+            </p>
+        </fieldset>
+    </div>
+</div>
+<div class="row">
+    <fieldset>
+        <legend>About Deployment to AKS.</legend>
+        <p>
+            <b> Kubernetes Manifests and Helm charts </b> are created which are deployed using github actions. Other than deployment manifest, this website 
+            is using <b> nginx ingress controller. </b> <a href="https://github.com/kapilkhub/kapilkhubchandani"> here is the source code</a>
+        </p>
+    </fieldset>
 </div>
