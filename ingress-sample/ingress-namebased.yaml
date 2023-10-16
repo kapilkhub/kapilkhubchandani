@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-namebased
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: profile.kapilkhubchandani.de
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: kapilkhubchandani
+            port:
+              number: 80

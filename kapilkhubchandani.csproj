@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="aks-networking\" />
     <Folder Include="helm\khubchandani\charts\" />
   </ItemGroup>
 
