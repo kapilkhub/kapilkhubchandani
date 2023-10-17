@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="acr-to-aks\" />
     <Folder Include="aks-networking\" />
     <Folder Include="helm\khubchandani\charts\" />
     <Folder Include="ingress-sample\" />
