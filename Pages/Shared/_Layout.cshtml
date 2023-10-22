@@ -1,51 +1,388 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - kapilkhubchandani</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/kapilkhubchandani.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>Kapil Khubchandani</title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/owl-carousel/owl.carousel.css">
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/nice-select/css/nice-select.css">
+
+    <link rel="stylesheet" type="text/css" href="~/vendor/fancybox/css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/virtual.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/topbar.virtual.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body class="theme-red">
+    
+    <!-- Back to top button -->
+    <div class="btn-back_to_top">
+        <span class="ti-arrow-up"></span>
+    </div>
+
+    <!-- Setting button -->
+    <div class="config">
+        <div class="template-config">
+            <!-- Settings -->
+            <div class="d-block">
+                <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+            </div>
+            <!-- Puschase -->
+            <div class="d-block">
+                <a href="https://macodeid.com/projects/virtual-folio/" class="btn btn-fab btn-sm" title="Get this template"
+                   data-toggle="tooltip" data-placement="left"><span class="ti-download"></span></a>
+            </div>
+            <!-- Help -->
+            <div class="d-block">
+                <a href="#" class="btn btn-fab btn-sm" title="Help" data-toggle="tooltip" data-placement="left">
+                    <span class="ti-help"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="vg-page page-home" id="home" style="background-image: url(../assets/img/bg_image_1.jpg)">
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">kapilkhubchandani</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <a href="" class="navbar-brand">Kapil Khubchandani</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+                    <span class="ti-menu"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="#home" class="nav-link" data-animate="scrolling">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a href="#about" class="nav-link" data-animate="scrolling">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link" data-animate="scrolling">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#linkedintestimonials" class="nav-link" data-animate="scrolling">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/kapilkhub/Architecture-Diagrams/tree/master" target="_blank" class="nav-link" 
+                            >My Solution Designs</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div> <!-- End Navbar -->
+        <!-- Caption header -->
+        <div class="caption-header text-center wow zoomInDown">
+            <h5 class="fw-normal">Welcome</h5>
+            <h1 class="fw-light mb-4">I'm <b class="fg-theme">Kapil</b> Khubchandani</h1>
+            <div class="badge">.net developer</div>
+        </div> <!-- End Caption header -->
+        <div class="floating-button"><span class="ti-mouse"></span></div>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @RenderBody()
+
+
+    <!-- Testimonial -->
+    <div id="linkedintestimonials" class="vg-page page-testimonial">
         <div class="container">
-            &copy; 2023 - kapilkhubchandani - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <h1 class="text-center fw-normal wow fadeInUp">Testimonials from Colleagues on LinkedIn</h1>
+            <div class="row justify-content-center mt-5 wow fadeInUp">
+                <div class="col-md-9">
+                    <div class="owl-carousel testi-carousel">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-place">
+                                        <img src="../assets/img/testimonials/Bala.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="caption">
+                                        <div class="testi-content">
+                                            I had the pleasure of collaborating with Kapil at Department of Education and Knowledge Abu Dhabi,
+                                            where he served as a Technical Lead and Application Architect.
+                                            Kapil is a highly skilled professional with a deep understanding
+                                            of technical concepts and a proven track record of leading successful projects.
+                                            Kapil consistently demonstrated strong problem-solving abilities, effective communication,
+                                            and a dedication to fostering a collaborative environment.
+                                            His leadership was pivotal in guiding the team towards innovative solutions and achieving project milestones.
+                                        </div>
+                                        <div class="testi-info">
+                                            <div class="thumb-profile">
+                                                <img src="../assets/img/testimonials/Bala.png" alt="">
+                                            </div>
+                                            <div class="tagline">
+                                                <h5 class="mb-0"><a href="https://www.linkedin.com/in/balamurali-s-csm%C2%AE-34199274/" target="_blank"> Balamurali S, CSM® </a></h5>
+                                                <span class="text-muted">IT Project Manager at Abu Dhabi Department of Education and Knowledge(ADEK)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-place">
+                                        <img src="../assets/img/testimonials/Sachin.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="caption">
+                                        <div class="testi-content">
+                                            Kapil is a very talented Solutions Architect, whom I have had the pleasure to work with in multiple projects, He is also has great knowledge in other technology and wonderful understanding of education domain. He is reliable and ready to take initiatives.
+                                            He is having solutions to every problem. I would highly recommend him as part of any team
+                                        </div>
+                                        <div class="testi-info">
+                                            <div class="thumb-profile">
+                                                <img src="../assets/img/testimonials/Sachin.png" alt="">
+                                            </div>
+                                            <div class="tagline">
+                                                <h5 class="mb-0"><a href="https://www.linkedin.com/in/sachin-kumar-sharma-4b580b2a/" target="_blank"> Kumar Sharma </a></h5>
+                                                <span class="text-muted">Team Lead At ADEK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-place">
+                                        <img src="../assets/img/testimonials/Anu.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="caption">
+                                        <div class="testi-content">
+                                            I have worked with Kapil in IRIS health care services
+                                            for one government project - Regulatory portal where the team was led by him .
+                                            He is very good in problem solving and have written lot of common code which reduces the effort of developers
+                                            in the team to build a new functionality or enhancement .
+                                            He strictly adhered to coding standards and principles while building the application from scratch .
+                                            <p>
+                                                I highly recommend Kapil.
+                                            </p>
+                                        </div>
+                                        <div class="testi-info">
+                                            <div class="thumb-profile">
+                                                <img src="../assets/img/testimonials/Anu.png" alt="">
+                                            </div>
+                                            <div class="tagline">
+                                                <h5 class="mb-0"><a href="https://www.linkedin.com/in/anu-tejaswy-menta-45586120/" target="_blank">Anu Tejaswi Menta</a></h5>
+                                                <span class="text-muted">Project Lead and Fullstack developer.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div> <!-- End testimonial -->
+    <!-- Blog -->
+    <div class="vg-page page-blog" id="blog">
+        <div class="container">
+            <div class="text-center">
+                <div class="badge badge-subhead wow fadeInUp">Blog</div>
+            </div>
+            <h1 class="text-center fw-normal wow fadeInUp">Latest Posts at LinkedIn</h1>
+            <div class="row post-grid">
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category"> Claims Transformation</a>
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7016473562781761536/" target="_blank" class="post-title">
+                                Reduce your cookie size!
+                            </a>
+                            <div>
+                                #ClaimTransformation in #netcore: Any Identity Provider(IP) such as #Facebook, #google or
+                                #LinkedIn or #IDS4 provides you data in form of claims. The nature of these claims is usually "Authentication-Only".
+                                i.e They tell you "Who" the user is.
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7016473562781761536/" target="_blank">Read more.</a>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 10 months ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category">Powershell Core</a>
+                            <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_powershell-activity-7003707619840307200-000h?utm_source=share&utm_medium=member_desktop"
+                               class="post-title">Powershell over cmd/bash</a>
+                            <div>
+                                some of the advantages of using #powershell over command prompt<br />
+                                SQL like methodolgies <br />
+                                SELECT Clause <br />
+                                Get-NetTCPConnection | Select-Object -Property *
+                                <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_powershell-activity-7003707619840307200-000h?utm_source=share&utm_medium=member_desktop" target="_blank">
+                                    Read more.
+                                </a>
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 11 months ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category">Python dataclasses</a>
+                            <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_pep-557-data-classes-activity-6922207997293142016-Zt9f?utm_source=share&utm_medium=member_desktop"
+                               class="post-title">PEP 557</a>
+                            <div>
+                                This is my first post on #pythonprogramming.
+                                I am not a python expert but only started learning since most of the #iot APIs are in only python.
+                                Though C# is catching up.
+                                <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_pep-557-data-classes-activity-6922207997293142016-Zt9f?utm_source=share&utm_medium=member_desktop"
+                                   target="_blank">
+                                    Read more.
+                                </a>
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 1 year ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    @await RenderSectionAsync("Scripts", required: false)
+            <div class="row post-grid">
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category">Graph Database</a>
+                            <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_graphdatabase-neo4j-cql-activity-6870629453442113536-o5PD?utm_source=share&utm_medium=member_desktop"
+                               target="_blank" class="post-title">
+                                Neo4J
+                            </a>
+                            <div>
+                                This post is regarding the usage of #GraphDatabase. mostly on Neo4J.
+                                As you guys know RDBMS are there in the market for almost 30 years now. It's a proven technology.
+                                We are well aware of issues with RDBMS
+                                <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_graphdatabase-neo4j-cql-activity-6870629453442113536-o5PD?utm_source=share&utm_medium=member_desktop"
+                                   target="_blank">Read more.</a>
+
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 2 year ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category">gRPC </a>
+                            <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_grpc-kafka-rabbitmq-activity-6755195344184717312-xroy?utm_source=share&utm_medium=member_desktop"
+                               class="post-title">Messaging Platform</a>
+                            <div>
+                                #gRPC or Google Remote procedure calls should be used in a microservice architecture
+                                if you don't have a queueing system like #Kafka or #rabbitmq or #Azure pub-sub in place.
+                                <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_grpc-kafka-rabbitmq-activity-6755195344184717312-xroy?utm_source=share&utm_medium=member_desktop"
+                                   target="_blank">
+                                    Read more.
+                                </a>
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 3 year ago.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp">
+                    <div class="card">
+                        <div class="caption">
+                            <a href="javascript:void(0)" class="post-category">Angular Memory Leak</a>
+                            <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_project-experience-angular-activity-6556113698342166528-zqCP?utm_source=share&utm_medium=member_desktop" class="post-title">
+                                How I solve memory leak in Angular?
+                            </a>
+                            <div>
+                                recently, I was assigned to create an editable grid view task. This grid view must be reusable and editable.
+                                When this custom control being started used in other reactive forms, we faced memory leakage problems
+                                <a href="https://www.linkedin.com/posts/kapil-khubchandani-9777b730_project-experience-angular-activity-6556113698342166528-zqCP?utm_source=share&utm_medium=member_desktop"
+                                   target="_blank">
+                                    Read more.
+                                </a>
+                            </div>
+                            <span class="post-date"><span class="sr-only">Published on</span> 4 year ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End blog -->
+
+    <!-- Footer -->
+    <div class="vg-footer" id="contact">
+        <h1 class="text-center">Kapil Khubchandani</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 py-3">
+                    <div class="footer-info">
+                        <p>Where to find me</p>
+                        <hr class="divider">
+                        <p class="fs-large fg-white">Hansastraße 116, 46049 Oberhausen NRW Germany.</p>
+                        <p class="fs-large fg-white">kapil.khubchandani7@gmail.com</p>
+                        <p class="fs-large fg-white">+4915225936905</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 py-3">
+                    <div class="float-lg-right">
+                        <p>Follow me</p>
+                        <hr class="divider">
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.linkedin.com/in/kapil-khubchandani-9777b730/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/kapilkhubchandani/">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- End footer -->
+
+    
+    <script src="~/js/jquery-3.5.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/vendor/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="~/vendor/isotope/isotope.pkgd.min.js"></script>
+
+    <script src="~/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+
+    <script src="~/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+    <script src="~/vendor/wow/wow.min.js"></script>
+
+    <script src="~/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+    <script src="~/vendor/waypoints/jquery.waypoints.min.js"></script>
+
+    <script src="~/js/google-maps.js"></script>
+
+    <script src="~/js/topbar-virtual.js"></script>
+
+   
+
 </body>
 </html>
