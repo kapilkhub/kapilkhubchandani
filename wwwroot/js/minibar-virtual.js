@@ -116,7 +116,7 @@ $(document).ready(function() {
   $('.testi-carousel').owlCarousel({
     margin: 0,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     dots: false,
     autoplayTimeout: 4000,
     items: 1,

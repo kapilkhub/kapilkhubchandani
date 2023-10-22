@@ -13,7 +13,7 @@ $(function() {
   $('.testi-carousel').owlCarousel({
     margin: 0,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 4000,
     items: 1,
   });
