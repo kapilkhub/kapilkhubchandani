@@ -5,7 +5,7 @@ metadata:
     app: kapilkhubchandani
   name: kapilkhubchandani
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: kapilkhubchandani
