@@ -1,317 +1,364 @@
 ﻿@page
 @model IndexModel
 @{
-	ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page";
 }
 <div class="vg-page page-about" id="about">
-	<div class="container py-5">
-		<div class="row">
-			<div class="col-lg-4 py-3">
-				<div class="img-place wow fadeInUp">
-					<img src="../assets/img/kapil standing 1.jpg" alt="">
-				</div>
-			</div>
-			<div class="col-lg-6 offset-lg-1 wow fadeInRight">
-				<h1 class="fw-light">Kapil Khubchandani</h1>
-				<h5 class="fg-theme mb-3">.net developer, Angular, Kubernetes, Azure & AKS</h5>
-				<p class="text-muted">
-					Being a .net enthusiast, who has seen .net eco-system grow very closely since 2008. 
-					I am a passionate tech explorer, who enjoys applying ideas to design, develop and improve business solutions.
-				</p>
-				<p class="text-muted">
-					I started my journey with C# and .net framework 2.0. Since then, 
-					I have worked and gained experience in technologies such as 
-					<span class="fg-theme">
-					.Net CORE,  web api, Angular (Nx Mono repo)  Docker and Kubernetes.
-					</span>
+    <div class="container py-5 my-brief">
+        <div class="row">
+            <div class="col-lg-4 py-3">
+                <div class="img-place wow fadeInUp">
+                    <img src="../assets/img/kapil standing 1.jpg" class="my-pic">
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+                <h1 class="fw-light">Kapil Khubchandani</h1>
+                <h5 class="fg-theme mb-3">.net developer, Angular, Kubernetes, Azure & AKS</h5>
+                <p class="text-muted">
+                    Being a .net enthusiast, who has seen .net eco-system grow very closely since 2008.
+                    I am a passionate tech explorer, who enjoys applying ideas to design, develop and improve business solutions.
+                </p>
+                <p class="text-muted">
+                    I started my journey with C# and .net framework 2.0. Since then,
+                    I have worked and gained experience in technologies such as
+                    <span class="fg-theme">
+                        .Net CORE,  web api, Angular (Nx Mono repo)  Docker and Kubernetes.
+                    </span>
 
-				</p>
-				
-				<p class="text-muted">
-					This website is infact deployed at <span class="fg-theme">AKS cluster</span> .
-				</p>
-				
-				
-				<a href="../assets/img/KapilKhubchandaniGermnany.pdf" target="_blank"
-				   class="btn btn-theme-outline">Download CV</a>
-			</div>
-		</div>
-	</div>
-	<div class="container py-5">
-		<h1 class="text-center fw-normal wow fadeIn">About this website.</h1>
-		<div class="row py-3 text-muted">
+                </p>
 
-			<p>
-				This website is developed using simple MVC razor pages.
-				However, this website is powered by <b class="fg-theme">Github Actions</b> and <b class="fg-theme">Azure Kubernetes Service (AKS). </b>
-				Behind the scenes AKS is connected with <b class="fg-theme">Azure Container Registry </b> in which image is pushed by Github actions
-			</p>
-			<p>AKS is deployed on a cluster which has two node pools i.e <b class="fg-theme">System Pool and User Pool </b>. 
-				To keep the cost low each pool has only one node. </p>
-			<p>
-				The authorization between AKS and ACR is handled
-				by service principal. But it can also be handled by Azure managed Identies.
-			</p>
-			<p>
-				<b class="fg-theme"> Kubernetes Manifests and Helm charts </b> are created which are deployed using github actions. 
-				Other than deployment manifest, this website
-				is using <b class="fg-theme"> nginx ingress controller. </b> <a href="https://github.com/kapilkhub/kapilkhubchandani"> here is the source code</a>
-			</p>
-
-		</div>
-
-	</div>
-	<div id="experience" class="container pt-5">
-		<div class="row">
-			<div class="col-md-6 wow fadeInRight">
-				<h2 class="fw-normal">Education</h2>
-				<ul class="timeline mt-4 pr-md-5">
-					<li>
-						<div class="title">2008-2012</div>
-						<div class="details">
-							<h5>Bachelor of Technology (Information Technology)</h5>
-							<small class="fg-theme">Rajasthan Technnical University, Kota (Rajasthan)</small>
-							<p>Its a 4 years degree program. I graduated as a Software Engineer in 2012</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
-				<h2 class="fw-normal">Experience</h2>
-				<ul class="timeline mt-4 pr-md-5">
-					<li>
-						<div class="title">2019 Aug*</div>
-						<div class="details">
-							<h5>Department of Education & Knowledge Abu Dhabhi [ADEK].</h5>
-							<small class="fg-theme">Applications Architect</small>
-							<p>I joined at ADEK in capacity of applications developer and got promoted to Applications Architect. </p>
-						</div>
-					</li>
-					<li>
-						<div class="title">2019 Jan - 2019 Aug</div>
-						<div class="details">
-							<h6>IRIS Technology, Dubai</h6>
-							<small class="fg-theme">Sr. Software Engineer</small>
-							<p>Developed and designed Regulatory Portal in Angular 8.</p>
-						</div>
-					</li>
-					<li>
-						<div class="title">2017 - 2019</div>
-						<div class="details">
-							<h5>Larsen and Toubro Infotech (LTI)</h5>
-							<small class="fg-theme">Sr. Software Engineer</small>
-							<p>I was team member of PARIS application for Paramount Pictures (US)</p>
-						</div>
-					</li>
-					<li>
-						<div class="title">2015 - 2017</div>
-						<div class="details">
-							<h5>Fiserv.</h5>
-							<small class="fg-theme">Sr. Software Engineer</small>
-							<p>I was team member of in-house HR management system</p>
-						</div>
-					</li>
-					<li>
-						<div class="title">2013 - 2015</div>
-						<div class="details">
-							<h5>Tata Consultancy Services (TCS)</h5>
-							<small class="fg-theme">System Engineer</small>
-							<p>
-								I was part of team which designed and develop applications for American Insurance Group for
-								Underwriting and Claims Division.
-							</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="container py-5">
-		<h1 id="skills" class="text-center fw-normal wow fadeIn">My Skills</h1>
-		<div class="row py-3">
-			<div class="col-md-6">
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">Developer/Programing skills</h4>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">C#</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-								 aria-valuemax="100">
-								Advanced
-							</div>
-						</div>
-					</div>
-
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Angular</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-								 aria-valuemax="100">
-								Advanced
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Xunit/Test Driven Development</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-								 aria-valuemax="100">
-								Advanced
-							</div>
-						</div>
-					</div>
-				</div>
-				</br>
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">Containerization skills</h4>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Docker</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Kubernetes</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Azure Kubernetes Service</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<div class="col-md-6">
-
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">.Net Core</h4>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Asp net core Web API</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Advanced
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">MVC</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Razor Pages</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-				</div>
-
-				</br>
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">CI/CD Skills</h4>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Github Actions</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">Azure Devops</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
-				</div>
+                <p class="text-muted">
+                    This website is infact deployed at <span class="fg-theme">AKS cluster</span> .
+                </p>
 
 
+                <a href="../assets/img/KapilKhubchandaniGermnany.pdf" target="_blank"
+                   class="btn btn-theme-outline">Download CV</a>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <h1 class="text-center fw-normal wow fadeIn">About this website.</h1>
+        <div class="row py-3 text-muted">
 
-				<br />
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">Relational Database</h4>
-					<div class="progress-wrapper wow fadeInUp">
-						<span class="caption">SQL Server</span>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
-								 aria-valuemax="100">
-								Intermediate
-							</div>
-						</div>
-					</div>
+            <p>
+                This website is developed using simple MVC razor pages.
+                However, this website is powered by <b class="fg-theme">Github Actions</b> and <b class="fg-theme">Azure Kubernetes Service (AKS). </b>
+                Behind the scenes AKS is connected with <b class="fg-theme">Azure Container Registry </b> in which image is pushed by Github actions
+            </p>
+            <p>
+                AKS is deployed on a cluster which has two node pools i.e <b class="fg-theme">System Pool and User Pool </b>.
+                To keep the cost low each pool has only one node.
+            </p>
+            <p>
+                The authorization between AKS and ACR is handled
+                by service principal. But it can also be handled by Azure managed Identies.
+            </p>
+            <p>
+                <b class="fg-theme"> Kubernetes Manifests and Helm charts </b> are created which are deployed using github actions.
+                Other than deployment manifest, this website
+                is using <b class="fg-theme"> nginx ingress controller. </b> <a href="https://github.com/kapilkhub/kapilkhubchandani"> here is the source code</a>
+            </p>
 
-				</div>
-			</div>
-		</div>
-		<div class="row py-3">
-			<div class="col-md-6">
-				<div class="px-lg-3">
-					<h4 class="wow fadeInUp">Other skills</h4>
-					<div class="progress-wrapper wow fadeInUp">
+        </div>
 
-						<ul>
-							<li>
-								Kafka
-							</li>
-							<li>
-								Identity Provider
-							</li>
-							<li>
-								Agile
-							</li>
-						</ul>
+    </div>
+    <div id="experience" class="container pt-5">
+        <div class="row">
+            <div class="col-md-6 wow fadeInRight">
+                <h2 class="fw-normal">Education</h2>
+                <ul class="timeline mt-4 pr-md-5">
+                    <li>
+                        <div class="title">2008-2012</div>
+                        <div class="details">
+                            <h5>Bachelor of Technology (Information Technology)</h5>
+                            <small class="fg-theme">Rajasthan Technnical University, Kota (Rajasthan)</small>
+                            <p>Its a 4 years degree program. I graduated as a Software Engineer in 2012</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
+                <h2 class="fw-normal">Experience</h2>
+                <ul class="timeline mt-4 pr-md-5">
+                    <li>
+                        <div class="title">2019 Aug*</div>
+                        <div class="details">
+                            <h5>Department of Education & Knowledge Abu Dhabhi [ADEK].</h5>
+                            <small class="fg-theme">Applications Architect</small>
+                            <p>I joined at ADEK in capacity of applications developer and got promoted to Applications Architect. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">2019 Jan - 2019 Aug</div>
+                        <div class="details">
+                            <h6>IRIS Technology, Dubai</h6>
+                            <small class="fg-theme">Sr. Software Engineer</small>
+                            <p>Developed and designed Regulatory Portal in Angular 8.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">2017 - 2019</div>
+                        <div class="details">
+                            <h5>Larsen and Toubro Infotech (LTI)</h5>
+                            <small class="fg-theme">Sr. Software Engineer</small>
+                            <p>I was team member of PARIS application for Paramount Pictures (US)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">2015 - 2017</div>
+                        <div class="details">
+                            <h5>Fiserv.</h5>
+                            <small class="fg-theme">Sr. Software Engineer</small>
+                            <p>I was team member of in-house HR management system</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">2013 - 2015</div>
+                        <div class="details">
+                            <h5>Tata Consultancy Services (TCS)</h5>
+                            <small class="fg-theme">System Engineer</small>
+                            <p>
+                                I was part of team which designed and develop applications for American Insurance Group for
+                                Underwriting and Claims Division.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
 
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="px-lg-3">
-					<br />
-					<div class="progress-wrapper wow fadeInUp">
-						<ul>
-							<li>
-								Redis
-							</li>
-							<li>
-								Microsoft Graph API
-							</li>
-							<li>
-								Team leading and design solutions.
-							</li>
-						</ul>
+        <h1 id="skills" class="text-center fw-normal wow fadeIn">My Skills</h1>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                </div>
+            </div>
+        </div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="row py-3">
+            <div class="col-md-6">
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">Developer/Programing skills</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">C#</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Advanced
+                            </div>
+                        </div>
+                    </div>
 
-	
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Angular</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Advanced
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Xunit/Test Driven Development</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Advanced
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">Containerization skills</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Docker</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Kubernetes</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Azure Kubernetes Service</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">.Net Core</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Asp net core Web API</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Advanced
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">MVC</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Razor Pages</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </br>
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">CI/CD Skills</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Github Actions</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">Azure Devops</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br />
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">Relational Database</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+                        <span class="caption">SQL Server</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                Intermediate
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-md-6">
+                <div class="px-lg-3">
+                    <h4 class="wow fadeInUp">Other skills</h4>
+                    <div class="progress-wrapper wow fadeInUp">
+
+                        <ul>
+                            <li>
+                                Kafka
+                            </li>
+                            <li>
+                                Identity Provider
+                            </li>
+                            <li>
+                                Agile
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="px-lg-3">
+                    <br />
+                    <div class="progress-wrapper wow fadeInUp">
+                        <ul>
+                            <li>
+                                Redis
+                            </li>
+                            <li>
+                                Microsoft Graph API
+                            </li>
+                            <li>
+                                Team leading and design solutions.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </div>
 
