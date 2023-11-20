@@ -1,6 +1,8 @@
 k get nodes -o wide
 
-kubectl debug node/aks-userpool-32898286-vmss000001 -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+kubectl debug node/aks-userpool-32898286-vmss000002 -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+
+chroot /host
 
 
 #  node-shell

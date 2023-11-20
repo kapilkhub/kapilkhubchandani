@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: mssql-managed-disk
+    namespace: my-profile
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: managed
+  resources:
+    requests:
+      storage: 3Gi

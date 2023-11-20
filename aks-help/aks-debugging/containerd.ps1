@@ -2,6 +2,13 @@ kubectl debug node/aks-userpool-32898286-vmss000002 -it --image=mcr.microsoft.co
 
 chroot /host
 
-journalctl -u kubelet -o cat
+systemctl status containerd
 
-systemctl status kubelet
+crictl images
+
+crictl pods
+
+crictl ps
+
+
+
