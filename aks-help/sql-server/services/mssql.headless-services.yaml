@@ -1,17 +1,16 @@
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: mssql
-  name: mssql
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: mssql 
   namespace: my-profile
-spec:
+  labels:
+   app: mssql 
+spec: 
   clusterIP: None
-  ports:
-  - name: database-port
-    port: 1433
-    protocol: TCP
-    targetPort: 1433
-  selector:
-    app: mssql
-
+  selector: 
+    app: mssql 
+  ports: 
+    - protocol: TCP 
+      port: 1433 
+      targetPort: 1433 
+  
